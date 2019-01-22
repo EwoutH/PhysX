@@ -1,5 +1,10 @@
 language: cpp
 
+before_install:
+  - chmod +x physx/generate_projects.bat
+  - chmod +x kaplademo/source/compiler/physx64copy.bat
+  - chmod +x kaplademo/source/compiler/physxcopy.bat
+
 jobs:
   include:
     - script: physx/generate_projects.bat
