@@ -1,1 +1,7 @@
 language: cpp
+
+jobs:
+  include:
+    - script: physx/generate_projects.bat
+    - script: kaplademo/source/compiler/physx64copy.bat
+    - script: kaplademo/source/compiler/physxcopy.bat
