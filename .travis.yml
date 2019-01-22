@@ -1,4 +1,5 @@
 language: cpp
+os: windows
 
 before_install:
   - chmod +x physx/generate_projects.bat
