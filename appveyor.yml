@@ -1,5 +1,8 @@
 configuration: release
 
-install: physx/generate_projects.bat
+env:
+ - SCRIPT: "physx/generate_projects.bat"
+ - SCRIPT: "msbuild kaplademo/source/compiler/vc15win64-PhysX_4.0/KaplaDemo.sln"
+ - SCRIPT: "cmake physx/compiler/public"
 
-build_script: msbuild kaplademo/source/compiler/vc15win64-PhysX_4.0/KaplaDemo.sln
+build_script: %SCRIPT%
