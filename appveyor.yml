@@ -1,13 +1,16 @@
 configuration: release
-cache: 'C:\projects\physx'
 
 environment:
   matrix:
-   - SCRIPT: 'msbuild kaplademo/source/compiler/vc15win64-PhysX_4.0/KaplaDemo.sln'
-   - SCRIPT: 'cmake physx/compiler/public/'
-   - SCRIPT: 'cmake physx/samples/compiler/cmake/windows/'
-   - SCRIPT: 'cmake physx/snippets/compiler/cmake/windows/'
-   - SCRIPT: 'physx/generate_projects.bat'
+   - SCRIPT: "1"
+   - SCRIPT: "2"
+   - SCRIPT: "3"
+   - SCRIPT: "4"
+   - SCRIPT: "5"
 
 build_script:
- - cmd %SCRIPT%
+   - IF "%SCRIPT%"=="1" (msbuild kaplademo/source/compiler/vc15win64-PhysX_4.0/KaplaDemo.sln)
+   - IF "%SCRIPT%"=="2" (cmake physx/compiler/public/)
+   - IF "%SCRIPT%"=="3" (cmake physx/samples/compiler/cmake/windows/)
+   - IF "%SCRIPT%"=="4" (cmake physx/snippets/compiler/cmake/windows/)
+   - IF "%SCRIPT%"=="5" (physx/generate_projects.bat)
