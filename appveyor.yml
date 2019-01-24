@@ -7,5 +7,5 @@ env:
  - SCRIPT: "cmake physx/samples/compiler/cmake/windows/"
  - SCRIPT: "cmake physx/snippets/compiler/cmake/windows/"
 
-build_script: 
- - %SCRIPT%
+build_script:
+ - cmd %SCRIPT%
