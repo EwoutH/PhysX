@@ -1,3 +1,5 @@
 configuration: release
 
+install: physx/generate_projects.sh
+
 build_script: msbuild kaplademo/source/compiler/vc15win64-PhysX_4.0/KaplaDemo.sln
